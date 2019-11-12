@@ -16,6 +16,13 @@ namespace Acme.Biz
         #region Constructors
         public Product()
         {
+            //var colorOptions = new string[4];
+            //colorOptions[0] = "Red";
+            //colorOptions[1] = "Blue";
+
+            string[] colorOptions = { "Red", "Blue" };
+            Console.WriteLine(colorOptions[1]);
+
 
         }
         public Product(int productId,
@@ -40,7 +47,8 @@ namespace Acme.Biz
         private string productName;
         public string ProductName
         {
-            get {
+            get
+            {
                 var formattedValue = productName?.Trim();
                 return formattedValue;
             }
@@ -66,7 +74,8 @@ namespace Acme.Biz
         private Vendor productVendor;
         public Vendor ProductVendor
         {
-            get {
+            get
+            {
                 if (productVendor == null)
                 {
                     productVendor = new Vendor();
